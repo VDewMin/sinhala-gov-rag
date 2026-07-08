@@ -75,6 +75,11 @@ if __name__ == "__main__":
       print(f" {m['book']} chapter {m['chapter']}: {len(m['text'])} chars")
 
    chunks = chunk_all(merged)
+   # TEMPORARY DEBUG: find any chunk containing our test phrase, and check its labeled book
+   print("\n--- DEBUG: searching chunks for 'ජෙනී' ---")
+   for c in chunks:
+       if "ජෙනී" in c["text"]:
+           print(f"Found in book={c['book']}, chapter={c['chapter']}, chunk_index={c['chunk_index']}")
    print(f"\nTotal chunks produced: {len(chunks)}")
    print("\nSample chunk:")
    print(chunks[0])
