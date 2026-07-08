@@ -23,7 +23,7 @@ def build_chunks():
         book_name="grade11"
     )
     grade10_entries = parse_extracted_file(
-        Path("data/history-textbook/grade11_extracted.txt"), 
+        Path("data/history-textbook/grade10_extracted.txt"), 
         book_name="grade10"
     )
 
